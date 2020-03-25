@@ -1,0 +1,182 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	font: 12px Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #061C37;
+	background: #EEEFE4;
+	background-image:url(images/background.png);
+}
+*
+{
+  margin: 0 auto 0 auto;
+ text-align:left;}
+
+#container
+{
+  display: block; 
+  height:auto;
+  position: relative; 
+  width: 960px;
+}
+
+#addAddress,#addPhone,#addDate,#create,#cancel,#searchButton,#edit{
+	border: outset;
+	width: 130px;
+	margin: 8px;
+}
+
+.myButton{
+	border: outset;
+	margin: 1px;
+}
+#header
+{
+height:85px;
+width:960px;	
+}
+
+#header h1
+{
+	position:absolute;
+text-align:left;
+color:#FFFFFF;
+font-size:43px;
+color:#FFF;	
+left:14px;
+top:18px;
+}
+
+
+#header h2
+{
+position:absolute;
+text-align:right;
+color:#A9D1FA;
+left:490px;
+top:38px;
+width:400px;
+}
+
+#menu
+{
+display:block;
+float:left;
+clear:both;
+width:960px;
+height:54px;
+float:left;
+clear:both;
+}
+
+
+#content
+{
+display:block;
+float:left;
+width:689px;
+height:auto;
+padding-left:10px;
+padding-top:15px;
+padding-right:10px;
+padding-bottom:5px;
+}
+
+
+#content_top
+{
+	width:689px;
+	height:25px;
+}
+
+#content_main
+{
+background-color: white;
+width:659px;
+padding-left:15px;
+padding-right:15px;
+}
+
+#content_bottom
+{
+width:689px;
+height:25px;
+}
+
+#menu ul {
+	list-style: none;
+	padding: 0px;
+	margin-left:auto;
+	width:960px;
+}
+
+#menu li {
+	list-style: none;
+	padding: 0px;	
+	display: inline; 
+	
+}
+
+#menu a {
+	float: left;
+	height: 36px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	padding-top: 18px;
+	font-size: 15px;
+	padding-left:13px;
+	padding-right:13px;
+	
+}
+
+#menu a:hover{
+	color:#86AEF9;
+	background-image:url(images/linkbackground.jpg);
+	background-repeat:repeat-x;
+}
+
+iframe{
+	border: none;
+	width: inherit;
+	height: inherit;
+}
+
+html, body {
+text-align: center;
+}
+p {text-align: left;}
+
+.pop-up{
+	padding-left:15px;
+	padding-right:15px;
+	position: absolute;
+	z-index: 100;
+	width: 659px;
+	background-color: white;
+}
+
+#alert-success{
+	background-color: white;
+	text-align: center;
+	margin: 15px;
+	padding: 15px;
+	font-size: large;
+}
+
+.form-group{
+	margin : 5px;
+}
+
+#searchField{
+	margin: 15px;
+	width: 360px;
+	align-content: center;
+	padding: 4px;
+	-webkit-mask-origin: border;
+}
+
+
