@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  		<script src="/scripts/bootstrap.min.js"></script>
+  		<script type="text/javascript" src="/scripts/contactScript.js"></script>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+        <title>Contact List Application</title>
+    </head>
+    
+    
+    <body>
+        <div id="container">
+			<div>
+				<div id="header">
+					<h1>Contact List Application</h1>
+					<h2>An application by Preethi Kesavan</h2>
+				</div>
+				<div id="menu">
+					<ul>
+						<li class="menuitem"><a href="/Home">Home</a></li>
+						<li class="menuitem"><a href="/showContact">Display Contacts</a></li>
+						<li class="menuitem"><a href="/addContact">Add Contact</a></li>
+						<li class="menuitem"><a href="/searchContact">Search Contact</a></li>
+					</ul>
+				</div>
+			</div>
+        		<div id="content">
+                    <div id="content_main">
+                	   <h2>Create new Contact</h2>
+                	   <form class="form-horizontal" id="createContact">
+							<div class="form-group">
+								<label class="control-label col-sm-5" for="fname">First name:</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="fname" name="fname" placeholder="First name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-5" for="mname">Middle name:</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="mname" name="mname" placeholder="Middle name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-5" for="lname">Last name:</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="lname" name="lname" placeholder="Last name">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="button" id="addAddress" onclick="showAddAddress()" class="btn btn-default">Add Address</button>
+								</div>
+							</div>
+							<div id="addressDiv">
+							</div>
+
+							<div style="display:none" id="addressTemp">
+								<button type="button" id="removeAddress" onclick="removeAddAddress(this.id)" style="float:right;">Remove</button>
+								<div class="form-group">
+									<label class="control-label col-sm-5" for="addType">Address Type</label>
+									<div class="col-sm-10">
+										<select id="addType" class="form-control" name="addType">
+											<option value="home">Home</option>
+											<option value="work">Work</option>
+											<option value="other">Other</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-5" for="address">Address</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="address" id="address" placeholder="Address">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-5" for="city">City</label>
+									<div class="col-sm-10">
+										<input class="form-control" type="text" name="city" id="city" placeholder="City">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-5" for="state">State</label>
+									<div class="col-sm-10">
+										<input type="text" name="state" class="form-control" id="state" placeholder="State">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-5" for="zip">Zip Code</label>
+									<div class="col-sm-10">
+										<input type="text" name="zip" class="form-control" id="zip" placeholder="Zip Code">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="button" onclick="showAddPhone()" id="addPhone" class="btn btn-default">Add Phone</button>
+								</div>
+							</div>
+
+							<div id="phoneDiv">
+							</div>
+							<div style="display:none" id="phoneTemp">
+								<button type="button" id="removePhone" onclick="removeAddPhone(this.id)" style="float:right;">Remove</button>
+								<div class="form-group">
+									<label class="control-label col-sm-5" for="phoneType">Phone Type</label>
+									<div class="col-sm-10">
+										<select id="phoneType" class="form-control" name="phoneType">
+											<option value="home">Home</option>
+											<option value="work">Work</option>
+											<option value="cell">Cell</option>
+											<option value="other">Other</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-5" for="areaCode">Area Code</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="areaCode" id="areaCode" placeholder="Area Code">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-5" for="number">Number</label>
+									<div class="col-sm-10">
+										<input class="form-control" type="text" name="number" id="number" placeholder="Number">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="button" id="addDate" onclick="showAddDate()" class="btn btn-default">Add Date</button>
+								</div>
+							</div>
+
+							<div id="dateDiv">
+							</div>
+							<div style="display:none" id="dateTemp">
+								<button type="button" id="removeDate" onclick="removeAddDate(this.id)" style="float:right;">Remove</button>
+								<div class="form-group">
+									<label class="control-label col-sm-5" for="dateType">Date Type</label>
+									<div class="col-sm-10">
+										<select id="dateType" class="form-control" name="dateType">
+											<option value="birthday">Birthday</option>
+											<option value="anniversary">Anniversary</option>
+											<option value="other">Other</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-5" for="date">Date</label>
+									<div class="col-sm-10">
+										<input type="date" name="date" id="date" class="form-control">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="button" id="create" onclick="createContact()"class="btn btn-default">Create</button>
+								</div>
+							</div>
+						   <div class="form-group">
+							   <div class="col-sm-offset-2 col-sm-10">
+								   <button type="button" id="cancel" class="btn btn-default"><a href="/addContact" class="btn btn-default">Cancel</a></button>
+							   </div>
+						   </div>
+						</form>
+                    </div>
+					<div style="display: none" id="alert-success">
+					</div>
+                </div>
+        </div>
+    </body>
+</html>
